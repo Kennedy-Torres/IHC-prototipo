@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #827f3c;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative; /* Permite posicionar os botões */
+
+        }
+
+        footer {
+            background-color: #827f3c;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: -50px; /* Inicia oculto abaixo da tela */
+            transition: bottom 0.3s; /* Adiciona transição suave */
+        }
+
+        #btn-topo {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Inicia oculto */
+        }
+
+        #btn-topo:hover {
+            background-color: #555;
+        }
+
+        #btn-enviar {
+            background-color: #524f26;
+            color: #FFF;
+            border: 2px solid #222; /* Adiciona uma borda escura */
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #btn-enviar:hover {
+            background-color: #D4C900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/EMENU-removebg-preview.png"></a>
+        <button id="btn-topo" onclick="topFunction()">
+            <img src="arrow_up.png" alt="Topo" width="20">
+        </button>
+        <a href="../template/signin.html"><button id="btn-enviar">
+            Entrar
+        </button></a>
+    </header>
+
+    <footer id="footer">
+        <p>&copy; 2024 EMENU. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

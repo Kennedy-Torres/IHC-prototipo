@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centraliza o conteúdo da página */
+        }
+
+        header {
+            background-color: #827f3c;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative; /* Permite posicionar os botões */
+        }
+
+        footer {
+            background-color: #827f3c;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: -50px; /* Inicia oculto abaixo da tela */
+            transition: bottom 0.3s; /* Adiciona transição suave */
+        }
+
+        #btn-topo {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Inicia oculto */
+        }
+
+        #btn-topo:hover {
+            background-color: #555;
+        }
+
+        #btn-enviar {
+            background-color: #524f26;
+            color: #FFF;
+            border: 2px solid #222; /* Adiciona uma borda escura */
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #btn-enviar:hover {
+            background-color: #D4C900;
+        }
+
+        .img {
+            display: block;
+            margin: auto;
+            width: 30%; /* Reduzido o tamanho da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        .description-box {
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center; /* Centraliza o texto e o botão */
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .btn-comprar {
+            background-color: #FFD700; /* Amarelo */
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn-comprar:hover {
+            background-color: #FFC107;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .back-link img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .back-link span {
+            text-decoration: underline; /* Sublinha o texto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/EMENU-removebg-preview.png"></a>
+        <button id="btn-topo" onclick="topFunction()">
+            <img src="arrow_up.png" alt="Topo" width="20">
+        </button>
+        <a href="../template/signin.html"><button id="btn-enviar">
+            Entrar
+        </button></a>
+    </header>
+
+    <a href="signin.html" class="back-link">
+        <img src="img/857681.png" alt="Ver mais da loja">
+        <span><b>Ver mais da loja</b></span>
+    </a>
+
+    <img class="img" src="img/2558214.png">
+
+    <div class="description-box">
+        <p>«Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? [33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.»</p>
+        <p class="price">R$ 49,99</p> <!-- Valor de exemplo -->
+        <button class="btn-comprar">Comprar</button>
+    </div>
+
+    <footer id="footer">
+        <p>&copy; 2024 EMENU. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
