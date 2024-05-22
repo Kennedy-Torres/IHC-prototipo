@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzaria Delícia - FAQ e SAC</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Pizzaria Delícia</h1>
+</header>
+<nav>
+    <a href="#home">Página Principal</a>
+    <a href="#contato">Contato</a>
+    <a href="#produtos">Apresentação dos Produtos</a>
+    <a href="#pagamento">Pagamento</a>
+</nav>
+<main class="container">
+    <section id="home">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="question">
+            <h3>Como faço para fazer um pedido?</h3>
+            <p>Para fazer um pedido, basta acessar nossa página de cardápio e selecionar os itens desejados. Em seguida, siga as instruções para finalizar o pedido.</p>
+        </div>
+        <div class="question">
+            <h3>Vocês entregam em toda a cidade?</h3>
+            <p>Atualmente, entregamos apenas em determinadas regiões da cidade. Consulte nossa página de entrega para verificar se sua área é atendida.</p>
+        </div>
+        <div class="question">
+            <h3>Posso personalizar os ingredientes da minha pizza?</h3>
+            <p>Sim, você pode personalizar sua pizza escolhendo os ingredientes que desejar. Basta selecionar a opção de personalização durante o pedido.</p>
+        </div>
+    </section>
+    <section id="contato">
+        <h2 class="section-title">Atendimento ao Cliente (SAC)</h2>
+        <div class="form-container">
+            <form id="contact-form" action="#" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Pizzaria Delícia. Todos os direitos reservados.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
