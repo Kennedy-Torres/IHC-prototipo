@@ -12,19 +12,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <!--
-        <header>
-            <a href="./index.html" class="logo"></i>EMENU</a>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./visaoGeral.html">Produtos</a></li>
-                    <li><a href="./Contato/sac.html">Contato</a></li>
-                    <li><a href="./compraRealizada.html"><img src="cart-icon.png" alt="Carrinho de Compras" class="cart-icon"><i class='bx bx-user'></i></a></li>
-                </ul>
-            </nav>
-        </header>
-        -->
         
         <header>
             <a href="./index.html" class="logo"></i>EMENU</a>
@@ -37,7 +24,7 @@
             </ul>
     
             <div class="header-icons">
-                <a href="cart.html"><i class='bx bx-cart'></i></a>
+                <a href="cart.html"><i class='bx bx-cart'><span id="cart-count">0</span></i></a>
                 <a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>
                 
             </div>
@@ -50,39 +37,91 @@
                     <div class="product-image">Reserva de Mesa</div>
                     <p>Facilite o processo de reserva para seus clientes, garantindo praticidade e organização para o seu estabelecimento.</p>
                     <br>
-                    <p>Preço: R$ 100,00</p>
+                    <p style="font-weight: bold;">Preço: R$ 100,00</p>
                     <br>
-                    <button onclick="addToCart('Reserva de Mesa', 100)"style="background-color: #336d36; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Comprar</button>
+                    <button onclick="addToCart('Reserva de Mesa', 100)">ADICIONAR AO CARRINHO</button>
                 </div>
-                <div class="product" data-price="200">
-                    <div class="product-image">Integração ao Ifood</div>
-                    <p>Aumente suas vendas conectando-se facilmente ao Ifood, uma das maiores plataformas de delivery do país.</p>
+                <div class="product" data-price="50">
+                    <div class="product-image">Calculadora de lucro</div>
+                    <p>Fique ciente de quanto foi seu lucro, ao final de cada mês é calculado o saldo ganho menos as despesas retornando uma planilha organizada de todos os mêses percorridos.</p>
                     <br>
-                    <p>Preço: R$ 200,00</p>
+                    <p style="font-weight: bold;">Preço: R$ 50,00</p>
                     <br>
-                    <button onclick="addToCart('Integração ao Ifood', 200)"style="background-color: #336d36; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Comprar</button>
+                    <button onclick="addToCart('Calculadora de lucro', 50)">ADICIONAR AO CARRINHO</button>
                 </div>
                 <div class="product" data-price="150">
                     <div class="product-image">Cardápio Digital</div>
                     <p>Ofereça um cardápio interativo e atualizado em tempo real, proporcionando aos seus clientes uma experiência moderna e conveniente.</p>
                     <br>
-                    <p>Preço: R$ 150,00</p>
+                    <p style="font-weight: bold;">Preço: R$ 150,00</p>
                     <br>
-                    <button onclick="addToCart('Cardápio Digital', 150)"style="background-color: #336d36; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Comprar</button>
+                    <button onclick="addToCart('Cardápio Digital', 150)">ADICIONAR AO CARRINHO</button>
                 </div>
                 <div class="product" data-price="120">
                     <div class="product-image">Progresso do Pedido</div>
                     <p> Permita que seus clientes acompanhem seus pedidos desde a preparação até a entrega, melhorando a transparência e a satisfação.</p>
                     <br>
-                    <p>Preço: R$ 120,00</p>
+                    <p style="font-weight: bold;">Preço: R$ 120,00</p>
                     <br>
-                    <button onclick="addToCart('Acompanhamento do Pedido', 120)"style="background-color: #336d36; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Comprar</button>
+                    <button onclick="addToCart('Cardápio Digital', 120)">ADICIONAR AO CARRINHO</button>
+                </div>
+            </section>
+
+            <section id="products" class="products">
+                <div class="product" data-price="200">
+                    <div class="product-imageIntegrados">Integração - Ifood</div>
+                    <p>Aumente suas vendas conectando-se facilmente ao IFOOD, implementamos o serviço de delivery na sua plataforma web.</p>
+                    <br>
+                    <p style="font-weight: bold;">Preço: R$ 200,00</p>
+                    <br>
+                    <button onclick="addToCart('Integração ao Ifood', 200)">ADICIONAR AO CARRINHO</button>
+                </div>
+                <div class="product" data-price="200">
+                    <div class="product-imageIntegrados">Integração - Rappi</div>
+                    <p>Aumente suas vendas conectando-se facilmente ao RAPPI, implementamos o serviço de delivery na sua plataforma web.</p>
+                    <br>
+                    <p style="font-weight: bold;">Preço: R$ 200,00</p>
+                    <br>
+                    <button onclick="addToCart('Integração - Rappi', 200)">ADICIONAR AO CARRINHO</button>
+                </div>
+                <div class="product" data-price="200">
+                    <div class="product-imageIntegrados">Integração-Uber Eats</div>
+                    <p>Aumente suas vendas conectando-se facilmente ao Uber Eats, implementamos o serviço de delivery na sua plataforma web.</p>
+                    <br>
+                    <p style="font-weight: bold;">Preço: R$ 200,00</p>
+                    <br>
+                    <button onclick="addToCart('Integração-Uber Eats', 200)">ADICIONAR AO CARRINHO</button>
+                </div>
+                <div class="product" data-price="200">
+                    <div class="product-imageIntegrados">Integração - 99pop</div>
+                    <p>Aumente suas vendas conectando-se facilmente ao 99Pop, implementamos o serviço de delivery na sua plataforma web.</p>
+                    <br>
+                    <p style="font-weight: bold;">Preço: R$ 200,00</p>
+                    <br>
+                    <button onclick="addToCart('Integração - 99pop', 200)">ADICIONAR AO CARRINHO</button>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <p>&copy; 2024 EMENU. Todos os direitos reservados.</p>
+
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EMENU</h1>
+                </div>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p style="color: aliceblue;">&copy; 2024 EMENU. Todos os direitos reservados.</p>
+            </div>
         </footer>
     
     <script src="./visaoGeral.js"></script>

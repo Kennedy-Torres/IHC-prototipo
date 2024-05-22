@@ -10,15 +10,24 @@
 :root{
     --bg-color:var(--bg-color) #1d2631;
     --tex-color: #ffffff;
-    --main-color: #f7fbfc;
+    --main-color: #EDE732;
     --other-color: #ffffff;
     --h1-font: 4rem;
     --p-font: 1rem;
 }
 p{
-    color:#ffffff
+    color:#000000;
+
     
 }
+.cart p{
+    font-weight: bold;
+}
+
+.home-text p{
+    color:#ffffff
+}
+
 
 
 body{
@@ -147,13 +156,13 @@ header{
     background: transparent;
     border: solid 2px var(--tex-color);
     transition: all.55 ease;
-    color: #f80606;
+    color: #fff; /*muda oq ????*/
 }
 
 .btn:hover{
     background: var(--tex-color);
     border: 2px solid var(--tex-color);
-    color: #336d36;
+    color: #336d36; /*muda oq ????*/
 }
 
 
@@ -162,7 +171,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff;
+    color: #ffffff;  /*muda oq ????*/
 }
 
 .main{
@@ -250,6 +259,7 @@ main {
     transform: translateY(-8px);
 }
 
+/*
 footer {
     background-color: #53350e;
     color: white;
@@ -258,6 +268,68 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}*/
+
+footer {
+    background-color: #53350e; /* Light gray background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer .footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer .footer-social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-social li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer .footer-social a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer .footer-social i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+footer .footer-copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
 }
 
 .bx {
@@ -290,12 +362,33 @@ nav ul li a {
 }
 
 .products {
+
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 80%;
     margin-top: 5%;
 }
+
+.product p{
+    color: #ffffff;
+    
+}
+
+
+.products button{
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 30px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.products button:hover{
+    background-color: #D9D365;
+}
+
 
 .product {
     background-color: #644b1b;
@@ -319,6 +412,18 @@ nav ul li a {
     vertical-align: middle;
 }
 
+.product-imageIntegrados {
+    background-color: #D4C900;
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 8px;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .cart {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -327,6 +432,20 @@ nav ul li a {
     padding: 20px;
     text-align: center;
     width: 80%;
+}
+
+.cart button{
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 30px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart button:hover { /* Hover state styles */
+  background-color: #D4C900; /* Darker green on hover */
 }
 
 
@@ -407,9 +526,9 @@ nav ul li a {
 
 .form-container input[type="submit"] {
     background-color: #3a8a34;
-    color: #333;
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 50px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -439,12 +558,15 @@ nav ul li a {
 }
 
 .cartItems {
-
+    
     width: 45%;
     background-color: #f4f4f4;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
+}
+.cartItems p{
+    color: #000;
 }
 
 .checkoutForm {
@@ -473,8 +595,13 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
-.checkoutForm input[type="text"], .checkoutForm input[type="radio"] {
+.checkoutForm input[type="text"]{
     width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.checkoutForm input[type="radio"]{
     padding: 8px;
     margin-bottom: 10px;
 }
@@ -497,6 +624,32 @@ nav ul li a {
 }
 
 .checkoutForm button:active {
-    background-color: #644b1b;
+    background-color: #D4C900;
     transform: translateY(1px);
 }
+
+/*CONTADOR DO CARRINHO DE COMPRAS*/
+#cart-count {
+    /* Existing styles from your code */
+    display: inline-block; /* Allow inline display */
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the count stand out */
+    position: relative;
+    top: -10px; /* Move the count above the icon */
+    right: -5px;
+    /*color: #f00; /* Red color for emphasis (change as desired) */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 5px 10px; /* Add some padding for visual comfort */
+    background-color: #6e766a; /* White background (adjust as needed) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+
+  #cart-items {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+  }
+
+  #cart-items li {
+    margin-bottom: 10px; /* Add space between list items */
+  }

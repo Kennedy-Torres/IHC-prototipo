@@ -191,7 +191,7 @@ footer {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #524F26;
 }
 
 .confirmation-message {
@@ -234,7 +234,7 @@ footer {
 }
 
 .confirmation-message button {
-    background-color: #34e7f8;
+    background-color: #827F3C;
     border: none;
     border-radius: 8px;
     color: white;
@@ -246,7 +246,7 @@ footer {
 }
 
 .confirmation-message button:hover {
-    background-color: #28c3d6;
+    background-color: #D9D365;
     transform: translateY(-2px);
 }
 
