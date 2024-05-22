@@ -7,7 +7,11 @@ function addToCart(productName, productPrice) {
     cart.push({ name: productName, price: productPrice });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert('Item adicionado ao carrinho');
-    window.location.href = 'finalizarCompra.html';
+    //window.location.href = 'finalizarCompra.html'; # abre na pagina finalizarCompra.html 
+
+    // Update cart count element
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cart.length;
 }
 
 
@@ -37,11 +41,14 @@ function checkout() {
         receipt += `${item.name} - R$ ${item.price.toFixed(2)}\n`;
     });
     receipt += `\nTotal: R$ ${totalPrice.toFixed(2)}`;
+    window.location.href = 'finalizarCompra.html';
+   /*
     alert(receipt);
 
     cart = [];
     localStorage.removeItem('cart');
     updateCart();
+    */
 }
 
 document.addEventListener('DOMContentLoaded', () => {

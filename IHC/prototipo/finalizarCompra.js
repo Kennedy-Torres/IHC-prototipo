@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const cardCVC = paymentForm.cardCVC.value;
             // Processar pagamento com cartão
             alert(`Pagamento com cartão aprovado! Nome no Cartão: ${cardName}`);
-        } else {
+        }else if (paymentMethod === 'boleto') {
             // Processar pagamento com boleto
             alert('Pagamento com boleto gerado!');
         }
