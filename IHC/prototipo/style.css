@@ -9,27 +9,26 @@
 
 :root{
     --bg-color:var(--bg-color) #1d2631;
-    --tex-color: #fff;
-    --main-color: #34e7f8;
-    --other-color: #fcfcfc;
+    --tex-color: #ffffff;
+    --main-color: #f7fbfc;
+    --other-color: #ffffff;
     --h1-font: 4rem;
     --p-font: 1rem;
 }
 p{
-    color:#000
+    color:#ffffff
     
 }
 
 
 body{
-    background-color:#1d2631 ;
+    background-color:#646b27 ;
     color: var(--tex-color);
 }
 
 
-
 header{
-    background-color: #111;
+    background-color: #53350e;
     position: fixed;
     width: 100%;
     top: 0;
@@ -120,11 +119,8 @@ header{
     margin-bottom: 2px;
 }
 
-.home-text h5{
-    color: #ffffff99;
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 60px;
+.home-text p{
+   margin-right: 50px;
 }
 
 .home-text h3{
@@ -137,9 +133,9 @@ header{
 
 .home-img img{
     max-width: 100%;
-    width: 28rem;
+    width: 35rem;
     height: auto;
-    margin-left: 25%;
+    margin-left: 35%;
 }
 
 
@@ -151,13 +147,13 @@ header{
     background: transparent;
     border: solid 2px var(--tex-color);
     transition: all.55 ease;
-    color: #fff;
+    color: #f80606;
 }
 
 .btn:hover{
     background: var(--tex-color);
     border: 2px solid var(--tex-color);
-    color: #000;
+    color: #336d36;
 }
 
 
@@ -166,6 +162,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #ffffff;
 }
 
 .main{
@@ -187,14 +184,15 @@ main {
 }
 
 .row{
-    background: var(--main-color);
+    background: #fca119;
     height: 70px;
     width: 70px;
     border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
     transition: all.55s ease;
     cursor: pointer;
-    display: inline-flex;
 }
 
 .row:hover {
@@ -203,7 +201,7 @@ main {
 }
 
 .row2{
-    background: #ff758d;
+    background: #fc1919;
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -235,8 +233,25 @@ main {
     transform: translateY(-8px);
 }
 
+.row4{
+    background: #eefa40;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+
+}
+
+.row4:hover{
+    transform: translateY(-8px);
+}
+
 footer {
-    background-color: #333;
+    background-color: #53350e;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -259,22 +274,6 @@ footer {
     color: rgb(255, 255, 255);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 nav ul {
     list-style: none;
     display: flex;
@@ -290,27 +289,16 @@ nav ul li a {
     text-decoration: none;
 }
 
-
-
 .products {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 60%;
+    width: 80%;
     margin-top: 5%;
 }
 
-.products button{
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 10px 30px; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer;
-}
-
 .product {
-    background-color: #f4f4f4;
+    background-color: #644b1b;
     border: 1px solid #ccc;
     border-radius: 8px;
     margin: 10px;
@@ -320,7 +308,7 @@ nav ul li a {
 }
 
 .product-image {
-    background-color: #000000;
+    background-color: #54582b;
     border: 1px solid #ccc;
     color: white;
     border-radius: 8px;
@@ -418,7 +406,7 @@ nav ul li a {
 }
 
 .form-container input[type="submit"] {
-    background-color: #1ebe12;
+    background-color: #3a8a34;
     color: #333;
     border: none;
     padding: 10px 20px;
@@ -438,9 +426,6 @@ nav ul li a {
      font-size: 16px;
     color: #000000;
 }
-
-
-
 
 
 /*---finalizarCompra--*/
@@ -495,7 +480,7 @@ nav ul li a {
 }
 
 .checkoutForm button {
-    background-color: #34e7f8;
+    background-color: #644b1b;
     border: none;
     border-radius: 8px;
     color: white;
@@ -507,28 +492,11 @@ nav ul li a {
 }
 
 .checkoutForm button:hover {
-    background-color: #28c3d6;
+    background-color: #644b1b;
     transform: translateY(-2px);
 }
 
 .checkoutForm button:active {
-    background-color: #1ba9b5;
+    background-color: #644b1b;
     transform: translateY(1px);
 }
-
-/*CONTADOR DO CARRINHO DE COMPRAS*/
-#cart-count {
-    /* Existing styles from your code */
-    display: inline-block; /* Allow inline display */
-    font-size: 18px; /* Adjust font size as needed */
-    font-weight: bold; /* Make the count stand out */
-    position: relative;
-    top: -10px; /* Move the count above the icon */
-    right: -5px;
-    /*color: #f00; /* Red color for emphasis (change as desired) */
-    border-radius: 5px; /* Add rounded corners */
-    padding: 5px 10px; /* Add some padding for visual comfort */
-    background-color: #6e766a; /* White background (adjust as needed) */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-  }
-
