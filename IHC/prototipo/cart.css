@@ -232,8 +232,8 @@ aside .box footer {
 aside > button {
   border: 0;
   padding: 15px 0;
-  color: white;
-  background: #28a745;
+  color: rgb(255, 255, 255);
+  background: #3bc55b;
   display: block;
   width: 100%;
   text-transform: uppercase;
