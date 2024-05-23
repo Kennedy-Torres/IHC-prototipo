@@ -9,9 +9,9 @@
 
 :root{
     --bg-color:var(--bg-color) #1d2631;
-    --tex-color: #ffffff;
-    --main-color: #EDE732;
-    --other-color: #ffffff;
+    --tex-color: #fff;
+    --main-color: #34e7f8;
+    --other-color: #fcfcfc;
     --h1-font: 4rem;
     --p-font: 1rem;
 }
@@ -26,18 +26,19 @@ p{
 
 .home-text p{
     color:#ffffff
+    
 }
 
 
 
 body{
-    background-color:#646b27 ;
+    background-color:#1d2631 ;
     color: var(--tex-color);
 }
 
 
 header{
-    background-color: #53350e;
+    background-color: #111;
     position: fixed;
     width: 100%;
     top: 0;
@@ -71,7 +72,7 @@ header{
 
 .navegação a{
     color: var(--other-color);
-    font-size: var(--p-font);
+    font-size: 22px;
     font-weight: 500;
     margin: 0 30px;
     transition: a .55s ease;
@@ -162,7 +163,7 @@ header{
 .btn:hover{
     background: var(--tex-color);
     border: 2px solid var(--tex-color);
-    color: #336d36; /*muda oq ????*/
+    color: #000;
 }
 
 
@@ -171,7 +172,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff;  /*muda oq ????*/
+
 }
 
 .main{
@@ -193,7 +194,7 @@ main {
 }
 
 .row{
-    background: #fca119;
+    background: var(--main-color);
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -210,7 +211,7 @@ main {
 }
 
 .row2{
-    background: #fc1919;
+    background: #ff758d;
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -259,21 +260,16 @@ main {
     transform: translateY(-8px);
 }
 
-/*
+
 footer {
-    background-color: #53350e;
-    color: white;
-    padding: 10px 0;
+    background-color: #333;
+    padding: 20px 0;
+    /*color: white;*/
     text-align: center;
+    /**/
     position: fixed;
     width: 100%;
     bottom: 0;
-}*/
-
-footer {
-    background-color: #53350e; /* Light gray background */
-    padding: 20px 0;
-    text-align: center;
 }
 
 footer .footer-content {
@@ -371,7 +367,7 @@ nav ul li a {
 }
 
 .product p{
-    color: #ffffff;
+    color: #000000;
     
 }
 
@@ -391,7 +387,7 @@ nav ul li a {
 
 
 .product {
-    background-color: #644b1b;
+    background-color: #f4f4f4;
     border: 1px solid #ccc;
     border-radius: 8px;
     margin: 10px;
@@ -401,7 +397,7 @@ nav ul li a {
 }
 
 .product-image {
-    background-color: #54582b;
+    background-color: #000000;
     border: 1px solid #ccc;
     color: white;
     border-radius: 8px;
@@ -413,7 +409,7 @@ nav ul li a {
 }
 
 .product-imageIntegrados {
-    background-color: #D4C900;
+    background-color: #656562;
     border: 1px solid #ccc;
     color: white;
     border-radius: 8px;
@@ -570,7 +566,7 @@ nav ul li a {
 }
 
 .checkoutForm {
-    width: 45%;
+    width: 60%;
     background-color: #f4f4f4;
     padding: 20px;
     border: 1px solid #ccc;
@@ -607,7 +603,7 @@ nav ul li a {
 }
 
 .checkoutForm button {
-    background-color: #644b1b;
+    background-color: #4CAF50;
     border: none;
     border-radius: 8px;
     color: white;
@@ -619,12 +615,12 @@ nav ul li a {
 }
 
 .checkoutForm button:hover {
-    background-color: #644b1b;
+    background-color: #D9D365;
     transform: translateY(-2px);
 }
 
 .checkoutForm button:active {
-    background-color: #D4C900;
+    background-color: #1ba9b5;
     transform: translateY(1px);
 }
 

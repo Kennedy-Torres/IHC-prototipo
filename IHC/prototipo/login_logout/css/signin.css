@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("../images/bg-signin.jpg");
+  background: linear-gradient(#4443437a,#4e4c4c);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -81,10 +81,10 @@ button{
   background-color: transparent;
   border-color: #272262;
   color: #272262;
-  padding: 7px;
+  padding: 14px;
   font-weight: bold;
-  font-size: 12pt;
-  margin-top: 20px;
+  font-size: 17pt;
+  margin-top: 5px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;

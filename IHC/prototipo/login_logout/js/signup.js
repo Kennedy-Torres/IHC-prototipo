@@ -10,6 +10,10 @@ let usuario = document.querySelector('#usuario')
 let labelUsuario = document.querySelector('#labelUsuario')
 let validUsuario = false
 
+let Email = document.querySelector('#Email')
+let labelEmail = document.querySelector('#labelEmail')
+let validEmail = false
+
 let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
 let validSenha = false
@@ -46,6 +50,20 @@ usuario.addEventListener('keyup', () => {
     labelUsuario.innerHTML = 'Usuário'
     usuario.setAttribute('style', 'border-color: green')
     validUsuario = true
+  }
+})
+
+Email.addEventListener('keyup', () => {
+  if(Email.value.length <= 4){
+    labelEmail.setAttribute('style', 'color: red')
+    labelEmail.innerHTML = 'Email *Invalido'
+    usuario.setAttribute('style', 'border-color: red')
+    validEmail = false
+  } else {
+    labelEmail.setAttribute('style', 'color: green')
+    labelEmail.innerHTML = 'Email'
+    Email.setAttribute('style', 'border-color: green')
+    validEmail = true
   }
 })
 

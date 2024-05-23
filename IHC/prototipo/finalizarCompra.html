@@ -32,8 +32,9 @@
 
         <main class="a">
             <div class="page-title logo">Finalizar Compra</div>
+            <div id="cartItems" class="cartItems"></div>
             <section id="cartSection" class="cartSection" style="color: black;">
-                <div id="cartItems" class="cartItems"></div>
+                
                 <div id="checkoutForm" class="checkoutForm">
                     <form id="paymentForm">
                         <h3>Escolha a forma de pagamento</h3>
@@ -68,11 +69,31 @@
                         
                         <button type="submit">Finalizar Compra</button>
                     </form>
+                    <a href="./visaoGeral.html"><button type="submit" style="margin-top: 10px;">Continuar Comprando</button></a>
                 </div>
             </section>
             
         </main>
 
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EMENU</h1>
+                </div>
+                <div class="footer-copyright">
+                    <p style="color: aliceblue;">&copy; 2024 EMENU. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                        <li><a href="#"><i class="bx bxl-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </footer>
 
     </div>
     <script src="./finalizarCompra.js"></script>
