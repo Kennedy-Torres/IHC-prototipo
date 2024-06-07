@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,37 +7,38 @@
     list-style: none;
 }
 
-:root{
-    --bg-color:var(--bg-color) #1d2631;
+:root {
+    --bg-color: var(--bg-color) #1d2631;
     --tex-color: #fff;
     --main-color: #34e7f8;
     --other-color: #fcfcfc;
     --h1-font: 4rem;
     --p-font: 1rem;
 }
-p{
-    color:#000000;
 
-    
+p {
+    color: #000000;
+
+
 }
-.cart p{
+
+.cart p {
     font-weight: bold;
 }
 
-.home-text p{
-    color:#ffffff
-    
+.home-text p {
+    color: #ffffff
 }
 
 
 
-body{
-    background-color:#1d2631 ;
+body {
+    background-color: #1d2631;
     color: var(--tex-color);
 }
 
 
-header{
+header {
     background-color: #111;
     position: fixed;
     width: 100%;
@@ -52,7 +53,7 @@ header{
 }
 
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     color: var(--tex-color);
@@ -60,17 +61,17 @@ header{
     font-weight: bold;
 }
 
-.logo i{
+.logo i {
     color: var(--main-color);
     font-size: 32px;
     margin-right: 5px;
 }
 
-.navegação{
+.navegação {
     display: flex;
 }
 
-.navegação a{
+.navegação a {
     color: var(--other-color);
     font-size: 22px;
     font-weight: 500;
@@ -78,42 +79,43 @@ header{
     transition: a .55s ease;
 }
 
-.navegação a:hover{
+.navegação a:hover {
     color: var(--main-color);
 
 }
 
 
-.header-icons{
+.header-icons {
     display: flex;
     align-items: center;
 }
 
-#menu{
+#menu {
     font-size: 35px;
     color: var(--tex-color);
     z-index: 10001;
     cursor: pointer;
 }
 
-.header-icons i{
+.header-icons i {
     margin-right: 25px;
     font-size: 28px;
     cursor: pointer;
     transition: all .5s ease;
 }
 
-.header-icons i:hover{
+.header-icons i:hover {
     transform: translateY(-5px);
     color: var(--main-color);
 }
 
 
-.section{
+.section {
 
     padding: 0 15%;
 }
-.home{
+/*
+.home {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -121,19 +123,33 @@ header{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
+}*/
+/* Estilos para a seção principal */
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 300px;
 }
 
-.home-text h1{
+.home-text {
+    height: 70vh;
+    flex: 1;
+    padding: 0 20px;
+}
+/*
+.home-text h1 {
     font-size: var(--h1-font);
     line-height: 1.2;
     margin-bottom: 2px;
 }
 
-.home-text p{
-   margin-right: 50px;
+.home-text p {
+    margin-right: 50px;
 }
 
-.home-text h3{
+.home-text h3 {
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -141,15 +157,15 @@ header{
 }
 
 
-.home-img img{
+.home-img img {
     max-width: 100%;
     width: 35rem;
     height: auto;
     margin-left: 35%;
 }
+*/
 
-
-.btn{
+.btn {
     display: inline-block;
     padding: 15px 70px;
     font-size: 16px;
@@ -157,10 +173,11 @@ header{
     background: transparent;
     border: solid 2px var(--tex-color);
     transition: all.55 ease;
-    color: #fff; /*muda oq ????*/
+    color: #fff;
+    /*muda oq ????*/
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--tex-color);
     border: 2px solid var(--tex-color);
     color: #000;
@@ -175,7 +192,7 @@ main {
 
 }
 
-.main{
+.main {
     position: absolute;
     top: 50%;
     left: 3%;
@@ -187,13 +204,13 @@ main {
     gap: 2rem;
 }
 
-.main li img{
+.main li img {
     width: 50px;
     height: auto;
     max-width: 100%;
 }
 
-.row{
+.row {
     background: var(--main-color);
     height: 70px;
     width: 70px;
@@ -210,7 +227,7 @@ main {
 
 }
 
-.row2{
+.row2 {
     background: #ff758d;
     height: 70px;
     width: 70px;
@@ -222,11 +239,11 @@ main {
     cursor: pointer;
 }
 
-.row2:hover{
+.row2:hover {
     transform: translateY(-8px);
 }
 
-.row3{
+.row3 {
     background: #ffd06d;
     height: 70px;
     width: 70px;
@@ -239,11 +256,11 @@ main {
 
 }
 
-.row3:hover{
+.row3:hover {
     transform: translateY(-8px);
 }
 
-.row4{
+.row4 {
     background: #eefa40;
     height: 70px;
     width: 70px;
@@ -256,7 +273,7 @@ main {
 
 }
 
-.row4:hover{
+.row4:hover {
     transform: translateY(-8px);
 }
 
@@ -366,22 +383,23 @@ nav ul li a {
     margin-top: 5%;
 }
 
-.product p{
+.product p {
     color: #000000;
-    
+
 }
 
 
-.products button{
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 10px 30px; 
-    border: none; 
-    border-radius: 4px; 
+.products button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.products button:hover{
+
+.products button:hover {
     background-color: #D9D365;
 }
 
@@ -430,30 +448,35 @@ nav ul li a {
     width: 80%;
 }
 
-.cart button{
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 10px 30px; 
-    border: none; 
-    border-radius: 4px; 
+.cart button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.cart button:hover { /* Hover state styles */
-  background-color: #D4C900; /* Darker green on hover */
+.cart button:hover {
+    /* Hover state styles */
+    background-color: #D4C900;
+    /* Darker green on hover */
 }
 
 
 /*---sac---*/
 #faq details summary {
-    display: flex; /* Allow space for the icon */
-    align-items: center; /* Align icon vertically */
-  }
-  
-  #faq details summary .faq-icon {
-    margin-right: 10px; /* Add space between icon and text */
-  }
+    display: flex;
+    /* Allow space for the icon */
+    align-items: center;
+    /* Align icon vertically */
+}
+
+#faq details summary .faq-icon {
+    margin-right: 10px;
+    /* Add space between icon and text */
+}
 
 #faq details {
     color: #000;
@@ -464,31 +487,33 @@ nav ul li a {
     padding: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  #faq details:hover {
+}
+
+#faq details:hover {
     background-color: #6c7667;
-  }
-  
-  #faq details summary {
+}
+
+#faq details summary {
     font-weight: bold;
-  }
-  
-  #faq details p {
+}
+
+#faq details p {
     /*display: none; /* Hide answer initially */
     padding: 15px;
     margin-bottom: 10px;
     line-height: 1.5;
     font-size: 16px;
     color: #333;
-    border-bottom: 1px solid #ddd; /* Add a subtle border to separate paragraphs */
-  }
-  
+    border-bottom: 1px solid #ddd;
+    /* Add a subtle border to separate paragraphs */
+}
 
-  #faq h2 {
+
+#faq h2 {
     text-align: center;
-    margin-bottom: 20px; /* Add some spacing below the heading */
-  }
+    margin-bottom: 20px;
+    /* Add some spacing below the heading */
+}
 
 .a {
     max-width: 900px;
@@ -534,11 +559,11 @@ nav ul li a {
     background-color: #D9D365;
 }
 
-.question p{
+.question p {
     padding: 10px 15px;
     margin-bottom: 15px;
     line-height: 1.5;
-     font-size: 16px;
+    font-size: 16px;
     color: #000000;
 }
 
@@ -554,14 +579,15 @@ nav ul li a {
 }
 
 .cartItems {
-    
+
     width: 45%;
     background-color: #f4f4f4;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
-.cartItems p{
+
+.cartItems p {
     color: #000;
 }
 
@@ -573,7 +599,8 @@ nav ul li a {
     border-radius: 8px;
 }
 
-.checkoutForm h3, .checkoutForm h4 {
+.checkoutForm h3,
+.checkoutForm h4 {
     margin-top: 0;
 }
 
@@ -591,13 +618,13 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
-.checkoutForm input[type="text"]{
+.checkoutForm input[type="text"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
 }
 
-.checkoutForm input[type="radio"]{
+.checkoutForm input[type="radio"] {
     padding: 8px;
     margin-bottom: 10px;
 }
@@ -627,25 +654,69 @@ nav ul li a {
 /*CONTADOR DO CARRINHO DE COMPRAS*/
 #cart-count {
     /* Existing styles from your code */
-    display: inline-block; /* Allow inline display */
-    font-size: 18px; /* Adjust font size as needed */
-    font-weight: bold; /* Make the count stand out */
+    display: inline-block;
+    /* Allow inline display */
+    font-size: 18px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Make the count stand out */
     position: relative;
-    top: -10px; /* Move the count above the icon */
+    top: -10px;
+    /* Move the count above the icon */
     right: -5px;
     /*color: #f00; /* Red color for emphasis (change as desired) */
-    border-radius: 5px; /* Add rounded corners */
-    padding: 5px 10px; /* Add some padding for visual comfort */
-    background-color: #6e766a; /* White background (adjust as needed) */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-  }
+    border-radius: 5px;
+    /* Add rounded corners */
+    padding: 5px 10px;
+    /* Add some padding for visual comfort */
+    background-color: #6e766a;
+    /* White background (adjust as needed) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+}
 
-  #cart-items {
-    list-style: none; /* Remove default bullet points */
+#cart-items {
+    list-style: none;
+    /* Remove default bullet points */
     padding: 0;
     margin: 0;
-  }
+}
 
-  #cart-items li {
-    margin-bottom: 10px; /* Add space between list items */
-  }
+#cart-items li {
+    margin-bottom: 10px;
+    /* Add space between list items */
+}
+
+
+
+/* CSS para o menu dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-icon {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,15 @@
 
         <div class="header-icons">
             <a href="cart.html"><i class='bx bx-cart'></i></a>
-            <a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>
+            <!-- Menu dropdown ao clicar no ícone do usuário -->
+            <div class="dropdown">
+                <a id="userIcon" href="#"><i class='bx bx-user'></i></a>
+                <div class="dropdown-content">
+                    <a href="#" id="profile-link">Perfil</a>
+                    <a href="#" onclick="sair()" id="login-logout">Logout</a>
+                </div>
+            </div>
+            <!--<a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>-->
             <!--<div id="menu"><i class='bx bx-menu'></i></div>-->
         </div><!--header-icons-->
     </header>
@@ -107,6 +115,7 @@
                 navbar.classList.toggle('open');
             }
         </script>
+        <script src="/prototipo/login_logout/js/index.js"></script>
 
     </main>
     <footer class="footer">

@@ -18,14 +18,31 @@ function entrar(){
   let senhaLabel = document.querySelector('#senhaLabel')
   
   let msgError = document.querySelector('#msgError')
-  let listaUser = []
+  let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
   
-  let userValid = {
-    nome: '',
-    user: '',
-    senha: ''
+  let userValid = listaUser.find(item => usuario.value === item.userCad && senha.value === item.senhaCad);
+  
+  if (userValid) {
+    window.location.href = '../../index.html';
+    // Gera um token aleatório para simular login
+    let mathRandom = Math.random().toString(16).substr(2);
+    let token = mathRandom + mathRandom;
+
+    localStorage.setItem('token', token);
+    localStorage.setItem('userLogado', JSON.stringify(userValid));
+  }else {
+    // Caso usuário ou senha estejam incorretos
+    userLabel.style.color = 'red';
+    usuario.style.borderColor = 'red';
+    senhaLabel.style.color = 'red';
+    senha.style.borderColor = 'red';
+    msgError.style.display = 'block';
+    msgError.innerHTML = 'Usuário ou senha incorretos';
+    usuario.focus();
   }
-  
+
+
+
   listaUser = JSON.parse(localStorage.getItem('listaUser'))
   
   listaUser.forEach((item) => {

@@ -24,7 +24,15 @@
 
         <div class="header-icons">
             <a href="cart.html"><i class='bx bx-cart'></i></a>
-            <a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>
+            <!-- Menu dropdown ao clicar no ícone do usuário -->
+            <div class="dropdown">
+                <a href="#"><i class='bx bx-user'></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Perfil</a>
+                    <a href="#" onclick="sair()" id="login-logout">Logout</a>
+                </div>
+            </div>
+            <!--<a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>-->
 
         </div>
     </header>

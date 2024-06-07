@@ -6,12 +6,9 @@ function addToCart(productName, productPrice) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push({ name: productName, price: productPrice });
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Item adicionado ao carrinho');
     const cartCountElement = document.getElementById('cart-count');
     cartCountElement.textContent = cart.length;
 }
-
-
 
 
 function updateCart() {
@@ -51,3 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCart();
     }
 });
+
+
+// Função para cancelar a compra e limpar o carrinho
+window.cancelarCompra = function () {
+    if (confirm('Você tem certeza que deseja cancelar a compra?')) {
+        localStorage.removeItem('cart');
+        alert('Compra cancelada e carrinho esvaziado.');
+        window.location.href = './visaoGeral.html';
+    }
+};
