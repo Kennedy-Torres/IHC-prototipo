@@ -375,13 +375,14 @@ nav ul li a {
 }
 
 .products {
-
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 80%;
     margin-top: 5%;
+    flex-direction: row;
 }
+
 
 .product p {
     color: #000000;
