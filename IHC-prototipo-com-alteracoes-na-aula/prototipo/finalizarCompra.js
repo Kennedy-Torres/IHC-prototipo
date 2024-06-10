@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         let total = 0;
         cartItems.forEach(item => {
-            total += item.price;
-            cartItemsContainer.innerHTML += `<p>• ${item.name} - R$ ${item.price}</p>`;
+            total += item.price * item.quantity;
+            cartItemsContainer.innerHTML += `<p>• ${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</p>`;
         });
-        cartItemsContainer.innerHTML += `<p><strong>Total: R$ ${total}</strong></p>`;
+        cartItemsContainer.innerHTML += `<p><strong>Total: R$ ${total.toFixed(2)}</strong></p>`;
+    
     }
 
     const paymentForm = document.getElementById('paymentForm');

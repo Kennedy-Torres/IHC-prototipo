@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         let total = 0;
         cartItems.forEach(item => {
-            total += item.price;
-            orderDetailsContainer.innerHTML += `<p>${item.name} - R$ ${item.price.toFixed(2)}</p>`;
+            total += item.price * item.quantity;
+            orderDetailsContainer.innerHTML += `<p>${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</p>`;
         });
         orderDetailsContainer.innerHTML += `<p><strong>Total: R$ ${total.toFixed(2)}</strong></p>`;
     }
 
+    // Limpa o carrinho após exibir os itens
     localStorage.removeItem('cart');
 });

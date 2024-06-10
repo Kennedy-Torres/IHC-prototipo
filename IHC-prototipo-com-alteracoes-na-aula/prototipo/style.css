@@ -682,6 +682,62 @@ nav ul li a {
     margin: 0;
 }
 
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item span {
+    flex: 1;
+}
+
+.cart-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.cart-item button:hover {
+    background-color: #0056b3;
+}
+
+.cart-item button.remove-item {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.cart-item button.remove-item:hover {
+    background-color: #ff1a1a;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    width: 30px;
+    height: 30px;
+}
+
+.quantity-controls span {
+    margin: 0 -2px;
+    width: 30px;
+    text-align: center;
+}
+
 #cart-items li {
     margin-bottom: 10px;
     /* Add space between list items */
@@ -720,3 +776,4 @@ nav ul li a {
     width: 32px;
     height: 32px;
 }
+
