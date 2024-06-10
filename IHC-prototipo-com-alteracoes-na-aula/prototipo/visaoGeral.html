@@ -14,8 +14,8 @@
 <body>
 
     <header>
+        <!-- Cabeçalho com logo e links de navegação -->
         <a href="./index.html" class="logo"></i>EMENU</a>
-
         <ul class="navegação">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./visaoGeral.html">Produtos</a></li>
@@ -23,8 +23,9 @@
             <li><a href="./cart.html">Carrinho</a></li>
         </ul>
 
+        <!-- Ícones do cabeçalho, incluindo o ícone do carrinho com o contador -->
         <div class="header-icons">
-            <a href="cart.html"><i class='bx bx-cart'><span id="cart-count">0</span></i></a>
+            <a href="cart.html"><i class='bx bx-cart'><span id="cart-count"></span></i></a>
             <!-- Menu dropdown ao clicar no ícone do usuário -->
             <div class="dropdown">
                 <a href="#"><i class='bx bx-user'></i></a>
@@ -33,13 +34,13 @@
                     <a href="#" onclick="sair()" id="login-logout">Logout</a>
                 </div>
             </div>
-            <!--<a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>-->
-
         </div>
     </header>
 
     <main>
+        <!-- Seção de produtos -->
         <div class="page-title logo">Nossos Produtos</div>
+
         <section id="products" class="products">
             <div class="product" data-price="100">
                 <div class="product-image">Reserva de Mesa</div>

@@ -1,15 +1,17 @@
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-//let totalPrice = parseFloat(localStorage.getItem('totalPrice')) || 0;
 
-/*
-function addToCart(productName, productPrice) {
-    cart.push({ name: productName, price: productPrice });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    const cartCountElement = document.getElementById('cart-count');
-    cartCountElement.textContent = cart.length;
-    updateCart();
-}
-*/
+// Função que é executada quando o DOM da página é completamente carregado
+// se há itens com o id "cart-items", então atualiza o carrinho 
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('cart-items')) {
+        updateCart();
+    }
+});
+
+// Variável para armazenar os itens do carrinho, carregados do localStorage ou inicializados como um array vazio
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+
+// CRUD - C ... 
 function addToCart(productName, productPrice) {
     let existingProduct = cart.find(item => item.name === productName);
     if (existingProduct) {
@@ -23,38 +25,20 @@ function addToCart(productName, productPrice) {
     updateCart();
 }
 
-/*
+
+// CRUD - U ...
 function updateCart() {
     const cartItems = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
+    const cartCountElement = document.getElementById('cart-count'); // Seleciona o elemento do contador do carrinho
+    
+    // Limpa os elementos do carrinho
     cartItems.innerHTML = '';
-    totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
-    cart.forEach((item, index) => {
-        const div = document.createElement('div');
-        div.classList.add('cart-item');
-        //div.textContent = `• ${item.name} - R$ ${item.price.toFixed(2)}`;
-        div.innerHTML = `<span>• ${item.name} - R$ ${item.price.toFixed(2)}</span>`;
+    let totalPrice = 0; // preço total do carrinho
+    let totalItems = 0; // contar o número total de itens no carrinho
 
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remover';
-        removeButton.classList.add('remove-item');
-        removeButton.setAttribute('data-index', index);
-        removeButton.addEventListener('click', () => removeFromCart(index));
-
-        div.appendChild(removeButton);
-        cartItems.appendChild(div);
-    });
-
-    totalPriceElement.textContent = totalPrice.toFixed(2);
-}
-*/
-function updateCart() {
-    const cartItems = document.getElementById('cart-items');
-    const totalPriceElement = document.getElementById('total-price');
-    cartItems.innerHTML = '';
-    let totalPrice = 0;
-
+    // Percorre os itens do carrinho e os adiciona à lista de itens do carrinho
     cart.forEach((item, index) => {
         const div = document.createElement('div');
         div.classList.add('cart-item');
@@ -76,10 +60,14 @@ function updateCart() {
         div.appendChild(removeButton);
         cartItems.appendChild(div);
         
+        // Calcula o preço total e o número total de itens no carrinho
         totalPrice += item.price * item.quantity;
+        totalItems += item.quantity; // Adiciona a quantidade do item ao total de itens
     });
 
-    totalPriceElement.textContent = totalPrice.toFixed(2);
+     // Atualiza o preço total e o contador do carrinho
+    totalPriceElement.textContent = totalPrice.toFixed(2); 
+    cartCountElement.textContent = totalItems; 
 }
 function incrementQuantity(index) {
     cart[index].quantity += 1;
@@ -94,6 +82,7 @@ function decrementQuantity(index) {
     updateCart();
 }
 
+// CRUD - D ...
 // remove itens individuais do carrinho
 function removeFromCart(index) {
     cart.splice(index, 1);
@@ -101,6 +90,7 @@ function removeFromCart(index) {
     updateCart();
 }
 
+// CRUD - R ...
 function checkout() {
     if (cart.length === 0) {
         alert('Seu carrinho está vazio!');
@@ -109,24 +99,17 @@ function checkout() {
 
     let receipt = 'Resumo da compra:\n';
     cart.forEach(item => {
-        //receipt += `• ${item.name} - R$ ${item.price.toFixed(2)}\n`;
         receipt += `• ${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}\n`;
     });
-    //receipt += `\nTotal: R$ ${totalPrice.toFixed(2)}`;
     receipt += `\nTotal: R$ ${cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)}`;
+    
     // Salva o carrinho no localStorage antes de redirecionar
     localStorage.setItem('cart', JSON.stringify(cart));
 
     window.location.href = 'finalizarCompra.html';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementById('cart-items')) {
-        updateCart();
-    }
-});
-
-
+// CRUD - D ...
 // Função para cancelar a compra e limpar o carrinho
 window.cancelarCompra = function () {
     if (confirm('Você tem certeza que deseja cancelar a compra?')) {
@@ -135,3 +118,6 @@ window.cancelarCompra = function () {
         window.location.href = './visaoGeral.html';
     }
 };
+
+
+
