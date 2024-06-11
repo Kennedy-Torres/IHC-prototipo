@@ -1,3 +1,7 @@
+#profile-link, #login-logout{
+    cursor: pointer;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -114,17 +118,7 @@ header {
 
     padding: 0 15%;
 }
-/*
-.home {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
-}*/
-/* Estilos para a seção principal */
+
 .home {
     height: 100vh;
     display: flex;
@@ -138,32 +132,7 @@ header {
     flex: 1;
     padding: 0 20px;
 }
-/*
-.home-text h1 {
-    font-size: var(--h1-font);
-    line-height: 1.2;
-    margin-bottom: 2px;
-}
 
-.home-text p {
-    margin-right: 50px;
-}
-
-.home-text h3 {
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 35px;
-}
-
-
-.home-img img {
-    max-width: 100%;
-    width: 35rem;
-    height: auto;
-    margin-left: 35%;
-}
-*/
 
 .btn {
     display: inline-block;
@@ -375,12 +344,12 @@ nav ul li a {
 }
 
 .products {
-
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 80%;
     margin-top: 5%;
+    flex-direction: row;
 }
 
 .product p {

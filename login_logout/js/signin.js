@@ -68,3 +68,14 @@ function alterarSenha(usuario, novaSenha) {
   }
 }
 
+function alterarSenhaPrompt() {
+  let usuario = prompt("Informe o usuário:");
+  let novaSenha = prompt("Informe a nova senha:");
+  if (usuario && novaSenha) {
+    alterarSenha(usuario, novaSenha);
+    alert("Senha alterada com sucesso!");
+  } else {
+    alert("Usuário ou senha inválidos!");
+  }
+}
+
