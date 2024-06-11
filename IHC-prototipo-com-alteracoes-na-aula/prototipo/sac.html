@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Contato - FAQ e SAC</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html" class="logo"></i>EMENU</a>
+
+        <ul class="navegação">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./produtos.html">Produtos</a></li>
+            <li><a href="./sac.html">Contatos</a></li>
+            <li><a href="./cart.html">Carrinho</a></li>
+        </ul>
+
+        <div class="header-icons">
+            <a href="cart.html"><i class='bx bx-cart'></i></a>
+            <!-- Menu dropdown ao clicar no ícone do usuário -->
+            <div class="dropdown">
+                <a href="#"><i class='bx bx-user'></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Perfil</a>
+                    <a href="#" onclick="sair()" id="login-logout">Logout</a>
+                </div>
+            </div>
+            <!--<a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>-->
+
+        </div>
+    </header>
+
+
+
+
+    <main class="a">
+        
+        <section id="faq ">
+
+            <section id="faq">
+                <h2>Perguntas Frequentes</h2>
+                <details>
+                    <summary>
+                        <span class="faq-icon">
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.921 2.05835L8.27886 7.69993C8.12517 7.85414 7.87517 7.85414 7.72149 7.70045L7.72096 7.69993L2.07886 2.05835"
+                                    stroke="#0085CA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </span>
+                        Quais são os benefícios de integrar minha plataforma com o iFood?
+                    </summary>
+                    <p>• Aumente o alcance: Alcance um público mais amplo de clientes por meio do aplicativo e site do
+                    </p>
+                    <p>• Otimize os pedidos: Receba pedidos online de forma eficiente, reduzindo erros e economizando
+                        tempo.</p>
+                    <p>• Melhore a experiência do cliente: Forneça uma experiência de pedido conveniente e sem
+                        complicações para seus clientes.</p>
+                </details>
+
+
+                <details>
+                    <summary>
+                        <span class="faq-icon">
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.921 2.05835L8.27886 7.69993C8.12517 7.85414 7.87517 7.85414 7.72149 7.70045L7.72096 7.69993L2.07886 2.05835"
+                                    stroke="#0085CA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </span>
+                        Como a funcionalidade de reserva de mesa pode ajudar meu negócio?
+                    </summary>
+                    <p>• Gerencie reservas com facilidade: Receba, confirme e gerencie reservas online, liberando seu
+                        tempo
+                        e reduzindo a confusão.</p>
+                    <p>• Aumente a ocupação: Otimize a ocupação da sua mesa, permitindo que os clientes reservem com
+                        antecedência.</p>
+                    <p>• Melhore a experiência do cliente: Ofereça aos seus clientes a conveniência de reservar uma mesa
+                        a qualquer hora, de qualquer lugar.</p>
+                </details>
+
+                <details>
+                    <summary>
+                        <span class="faq-icon">
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.921 2.05835L8.27886 7.69993C8.12517 7.85414 7.87517 7.85414 7.72149 7.70045L7.72096 7.69993L2.07886 2.05835"
+                                    stroke="#0085CA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </span>
+                        Como o acompanhamento do preparo do pedido pode beneficiar meus clientes?
+                    </summary>
+                    <p>• Transparência: Forneça aos clientes atualizações em tempo real sobre o status do pedido,
+                        aumentando
+                        a confiança e a satisfação.</p>
+                    <p>• Reduza a ansiedade: Elimine a espera ansiosa, permitindo que os clientes acompanhem o progresso
+                        do
+                        pedido.</p>
+                    <p>• Melhore a experiência: Crie uma experiência de pedido mais envolvente e agradável para seus
+                        clientes.</p>
+                </details>
+
+            </section>
+
+            <section id="contato">
+                <h2 class="section-title">Atendimento ao Cliente (SAC)</h2>
+                <div class="form-container">
+                    <form id="contact-form" action="#" method="POST">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" required>
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>EMENU</h1>
+            </div>
+            <div class="footer-copyright">
+                <p style="color: aliceblue;">&copy; 2024 EMENU. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="sac.js"></script>
+    <script src="./login_logout/js/index.js"></script>
+</body>
+
+</html>
