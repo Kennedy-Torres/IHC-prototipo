@@ -1,4 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+  carregarDadosUsuario();
+  document.getElementById('profileForm').addEventListener('submit', salvarDadosUsuario);
+});
+
 // Função para carregar os dados do usuário logado
+
 function carregarDadosUsuario() {
   let listaUser = JSON.parse(localStorage.getItem('listaUser'));
   let usuarioLogado = JSON.parse(localStorage.getItem('userLogado')); // Carregar como objeto JSON
@@ -9,7 +15,7 @@ function carregarDadosUsuario() {
     if (userLogado) {
       document.getElementById('nome').value = userLogado.nomeCad;
       document.getElementById('usuario').value = userLogado.userCad;
-      document.getElementById('email').value = userLogado.emailCad || ""; // Adicione o campo de email se não existir
+      document.getElementById('email').value = userLogado.emailCad || "";
     }
   }
 }
@@ -52,11 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('profileForm').addEventListener('submit', salvarDadosUsuario);
 });
 
-function sair() {
-  localStorage.removeItem('token');
-  localStorage.removeItem('usuarioLogado');
-  window.location.href = 'signin.html';
-}
 
 function sair() {
   console.log("Função sair() foi chamada."); // Adicionando um log para depuração
@@ -151,3 +152,8 @@ function deletarConta() {
   }
 }
 
+/* mostra os dados armazenados nos inputs do formulário de perfil
+document.getElementById('nome').value = userLogado.nome
+document.getElementById('usuario').value = usuario
+document.getElementById('email').value = email
+*/

@@ -2,6 +2,71 @@
     cursor: pointer;
 }
 
+#profileForm {
+    background-color: #2a2f3a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#profileForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+#profileForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+#profileForm button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #34e7f8;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#profileForm button:hover {
+    background-color: #2eccd0;
+}
+
+#deleteAccountBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#deleteAccountBtn:hover {
+    background-color: #c0392b;
+}
+
+
+.a {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+    min-height: 375px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -155,13 +220,13 @@ main {
 
 footer {
     background-color: #333;
-    padding: 20px 0;
-    /*color: white;*/
+    color: white;
+    padding: 15px 8%;
     text-align: center;
-    /**/
-    position: fixed;
+    /*position: fixed;*/ /*FOOTER NAO PRECISA FICAR FIXO NA LETA*/
+    position: absolute ;
     width: 100%;
-    bottom: 0;
+    bottom: auto;
 }
 
 footer .footer-content {
