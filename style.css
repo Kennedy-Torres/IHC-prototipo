@@ -56,7 +56,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 8%;
+    padding: 15px 8%;
     display: flex;
 }
 
@@ -176,7 +176,7 @@ main {
 
 .main {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 3%;
     transform: translateY(-50%);
     display: flex;
@@ -262,11 +262,12 @@ main {
 footer {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 15px 8%;
     text-align: center;
-    position: fixed;
+    /*position: fixed;*/ /*FOOTER NAO PRECISA FICAR FIXO NA LETA*/
+    position: absolute ;
     width: 100%;
-    bottom: 0;
+    bottom: auto;
 }
 
 footer .footer-content {
@@ -499,6 +500,7 @@ nav ul li a {
     max-width: 900px;
     margin: 80px auto;
     padding: 20px;
+    min-height: 375px;
 }
 
 
