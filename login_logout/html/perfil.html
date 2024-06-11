@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="../css/perfil.css">
 </head>
-
 <body>
     <header>
         <a href="../../index.html" class="logo">EMENU</a>
-
         <ul class="navegação">
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../visaoGeral.html">Produtos</a></li>
             <li><a href="../../sac.html">Contatos</a></li>
             <li><a href="../../cart.html">Carrinho</a></li>
         </ul>
-
         <div class="header-icons">
             <a href="cart.html"><i class='bx bx-cart'></i></a>
+            <!-- Menu dropdown ao clicar no ícone do usuário -->
             <div class="dropdown">
                 <a id="userIcon" href="#"><i class='bx bx-user'></i></a>
                 <div class="dropdown-content">
-                    <a id="profile-link">Perfil</a>
+                    <a onclick="perfil()" id="profile-link">Perfil</a>
                     <a onclick="sair()" id="login-logout">Logout</a>
-
                 </div>
+            </div>
             </div>
         </div>
     </header>
@@ -37,7 +34,7 @@
             <label for="nome">Nome:</label>
             <input type="text" id="nome"><br><br>
             <label for="usuario">Usuário:</label>
-            <input type="text" id="usuario"><br><br>
+            <input type="text" id="usuario" readonly><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email"><br><br>
             <label for="senha">Nova Senha:</label>
@@ -46,6 +43,7 @@
             <input type="password" id="confirmSenha"><br><br>
             <button type="submit">Salvar alterações</button>
         </form>
+        <button id="deleteAccountBtn">Deletar Conta</button>
     </main>
     <footer class="footer">
         <div class="footer-content">
@@ -67,46 +65,5 @@
     </footer>
     <script src="perfil.js"></script>
     <script src="../js/signin.js"></script>
-    <script>
-        document.getElementById('profileForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            alterarSenhaForm();
-        });
-
-        function alterarSenhaForm() {
-            const usuario = document.getElementById('usuario').value.trim();
-            const novaSenha = document.getElementById('senha').value.trim();
-            const confirmSenha = document.getElementById('confirmSenha').value.trim();
-
-            if (!usuario || !novaSenha || !confirmSenha) {
-                alert("Por favor, preencha todos os campos.");
-                return;
-            }
-
-            if (novaSenha !== confirmSenha) {
-                alert("As senhas não coincidem.");
-                return;
-            }
-
-            alterarSenha(usuario, novaSenha);
-            alert("Senha alterada com sucesso!");
-        }
-
-        function alterarSenha(usuario, novaSenha) {
-            // Função para alterar a senha do usuário no sistema
-            // Aqui você deve adicionar a lógica para alterar a senha do usuário
-            console.log(`Usuário: ${usuario}, Nova Senha: ${novaSenha}`);
-
-            let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
-
-            let userIndex = listaUser.findIndex(item => item.userCad === usuario);
-
-            if (userIndex !== -1) {
-                listaUser[userIndex].senhaCad = novaSenha;
-                localStorage.setItem('listaUser', JSON.stringify(listaUser));
-            }
-        }
-    </script>
 </body>
-
 </html>

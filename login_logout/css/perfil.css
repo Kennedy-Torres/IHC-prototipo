@@ -87,11 +87,27 @@ header {
     cursor: pointer;
 }
 
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
 .header-icons i {
     margin-right: 25px;
     font-size: 28px;
     cursor: pointer;
     transition: all .5s ease;
+    .product-image {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        color: white;
+        border-radius: 8px;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 15px;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
 .header-icons i:hover {

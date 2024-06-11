@@ -39,11 +39,15 @@ p {
 body {
     background-color: #1d2631;
     color: var(--tex-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
 header {
     background-color: #111;
+    color: white;
     position: fixed;
     width: 100%;
     top: 0;
@@ -53,7 +57,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 30px 8%;
-
+    display: flex;
 }
 
 
@@ -106,6 +110,17 @@ header {
     font-size: 28px;
     cursor: pointer;
     transition: all .5s ease;
+    .product-image {
+        background-color: #000000;
+        border: 1px solid #ccc;
+        color: white;
+        border-radius: 8px;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 15px;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
 .header-icons i:hover {
@@ -118,7 +133,6 @@ header {
 
     padding: 0 15%;
 }
-
 .home {
     height: 100vh;
     display: flex;
@@ -132,7 +146,6 @@ header {
     flex: 1;
     padding: 0 20px;
 }
-
 
 .btn {
     display: inline-block;
@@ -246,13 +259,11 @@ main {
     transform: translateY(-8px);
 }
 
-
 footer {
     background-color: #333;
-    padding: 20px 0;
-    /*color: white;*/
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    /**/
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -620,6 +631,78 @@ nav ul li a {
     transform: translateY(1px);
 }
 
+/*---compraRealizada--*/
+
+.confirmation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #524F26;
+}
+
+.confirmation-message {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 40px;
+    width: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-message img.success-icon {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.confirmation-message h1 {
+    margin-bottom: 20px;
+}
+
+.confirmation-message p {
+    margin-bottom: 30px;
+}
+
+.confirmation-message .order-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.confirmation-message .order-summary h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.confirmation-message .order-details p {
+    margin: 5px 0;
+}
+
+.confirmation-message button {
+    background-color: #827F3C;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-message button:hover {
+    background-color: #D9D365;
+    transform: translateY(-2px);
+}
+
+.confirmation-message button:active {
+    background-color: #1ba9b5;
+    transform: translateY(1px);
+}
+
 /*CONTADOR DO CARRINHO DE COMPRAS*/
 #cart-count {
     /* Existing styles from your code */
@@ -745,4 +828,3 @@ nav ul li a {
     width: 32px;
     height: 32px;
 }
-
