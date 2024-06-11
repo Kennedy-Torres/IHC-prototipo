@@ -24,7 +24,7 @@ function entrar() {
         let token = mathRandom + mathRandom;
 
         localStorage.setItem('token', token);
-        localStorage.setItem('userLogado', JSON.stringify(userValid));
+        localStorage.setItem('usuarioLogado', userValid.userCad); // Armazenar o usuário logado
 
         window.location.href = '../../index.html';
     } else {
@@ -34,48 +34,24 @@ function entrar() {
     }
 }
 
-
-  if (userValid) {
-    // Armazenar o usuário logado no localStorage
-    localStorage.setItem('usuarioLogado', userValid.userCad);
-
-    // Gera um token aleatório para simular login
-    let token = (Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)).toString();
-    localStorage.setItem('token', token);
-    localStorage.setItem('userLogado', JSON.stringify(userValid));
-
-    window.location.href = '../../index.html';
-  } else {
-    // Caso usuário ou senha estejam incorretos
-    userLabel.style.color = 'red';
-    document.querySelector('#usuario').style.borderColor = 'red';
-    senhaLabel.style.color = 'red';
-    document.querySelector('#senha').style.borderColor = 'red';
-    msgError.style.display = 'block';
-    msgError.innerHTML = 'Usuário ou senha incorretos';
-    document.querySelector('#usuario').focus();
-  }
-
-
 function alterarSenha(usuario, novaSenha) {
-  let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
-  
-  let userIndex = listaUser.findIndex(item => item.userCad === usuario);
+    let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
+    
+    let userIndex = listaUser.findIndex(item => item.userCad === usuario);
 
-  if (userIndex !== -1) {
-    listaUser[userIndex].senhaCad = novaSenha;
-    localStorage.setItem('listaUser', JSON.stringify(listaUser));
-  }
+    if (userIndex !== -1) {
+        listaUser[userIndex].senhaCad = novaSenha;
+        localStorage.setItem('listaUser', JSON.stringify(listaUser));
+    }
 }
 
 function alterarSenhaPrompt() {
-  let usuario = prompt("Informe o usuário:");
-  let novaSenha = prompt("Informe a nova senha:");
-  if (usuario && novaSenha) {
-    alterarSenha(usuario, novaSenha);
-    alert("Senha alterada com sucesso!");
-  } else {
-    alert("Usuário ou senha inválidos!");
-  }
+    let usuario = prompt("Informe o usuário:");
+    let novaSenha = prompt("Informe a nova senha:");
+    if (usuario && novaSenha) {
+        alterarSenha(usuario, novaSenha);
+        alert("Senha alterada com sucesso!");
+    } else {
+        alert("Usuário ou senha inválidos!");
+    }
 }
-

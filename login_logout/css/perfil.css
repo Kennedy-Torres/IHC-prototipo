@@ -1,4 +1,4 @@
-#profile-link, #login-logout{
+#profile-link, #login-logout {
     cursor: pointer;
 }
 
@@ -44,7 +44,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 30px 8%;
-
 }
 
 .logo {
@@ -70,7 +69,7 @@ header {
     font-size: 22px;
     font-weight: 500;
     margin: 0 30px;
-    transition: a .55s ease;
+    transition: a .55s ease; /*color*/
 }
 
 .navegação a:hover {
@@ -116,9 +115,8 @@ header {
     font-weight: 500;
     background: transparent;
     border: solid 2px var(--tex-color);
-    transition: all.55 ease;
+    transition: all .55s ease;
     color: #fff;
-    /*muda oq ????*/
 }
 
 .btn:hover {
@@ -126,7 +124,6 @@ header {
     border: 2px solid var(--tex-color);
     color: #000;
 }
-
 
 main {
     padding: 20px;
@@ -285,4 +282,47 @@ nav ul li a {
     width: 32px;
     height: 32px;
 }
+.form-container {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
 
+.form-container label {
+    color: #fff;
+}
+
+.form-container input[type="text"] {
+    background-color: #333;
+    border: none;
+    color: #fff;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.question p {
+    color: #fff;
+}

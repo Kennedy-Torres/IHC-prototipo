@@ -115,7 +115,11 @@ window.cancelarCompra = function () {
     if (confirm('Você tem certeza que deseja cancelar a compra?')) {
         localStorage.removeItem('cart');
         alert('Compra cancelada e carrinho esvaziado.');
+<<<<<<<< HEAD:produtos.js
         window.location.href = '../produtos.html';
+========
+        window.location.href = './visaoGeral.html';
+>>>>>>>> nick:visaoGeral.js
     }
 };
 
