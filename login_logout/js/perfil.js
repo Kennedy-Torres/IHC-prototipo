@@ -49,11 +49,10 @@ function alterarSenhaForm() {
 
   alterarSenha(usuario, novaSenha);
   alert("Senha alterada com sucesso!");
+  sair(); // Deslogar e redirecionar para a página de login
 }
 
 function alterarSenha(usuario, novaSenha) {
-  console.log(`Alterando senha para o usuário: ${usuario}`);
-
   let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
 
   let userIndex = listaUser.findIndex(item => item.userCad === usuario);
@@ -61,9 +60,6 @@ function alterarSenha(usuario, novaSenha) {
   if (userIndex !== -1) {
       listaUser[userIndex].senhaCad = novaSenha;
       localStorage.setItem('listaUser', JSON.stringify(listaUser));
-      console.log(`Senha alterada para o usuário: ${usuario}`);
-  } else {
-      console.log(`Usuário ${usuario} não encontrado.`);
   }
 }
 
@@ -83,8 +79,14 @@ function deletarConta() {
       listaUser.splice(userIndex, 1);
       localStorage.setItem('listaUser', JSON.stringify(listaUser));
       alert("Conta deletada com sucesso!");
-      window.location.href = 'login.html'; // Redireciona para a tela de login
+      sair(); // Deslogar e redirecionar para a página de login
   } else {
       alert("Usuário não encontrado.");
   }
+}
+
+function sair() {
+  localStorage.removeItem('token');
+  localStorage.removeItem('usuarioLogado');
+  window.location.href = 'signin.html';
 }

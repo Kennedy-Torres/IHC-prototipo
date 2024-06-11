@@ -1,3 +1,7 @@
+#profile-link, #login-logout {
+    cursor: pointer;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,21 +20,17 @@
     --p-font: 1rem;
 }
 
-p {
-    color: #000000;
-}
-
-.cart p {
-    font-weight: bold;
-}
-
 body {
-    background-color: #1d2631;
+    background-color: var(--bg-color);
     color: var(--tex-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #111;
+    color: white;
     position: fixed;
     width: 100%;
     top: 0;
@@ -40,7 +40,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 30px 8%;
-
 }
 
 .logo {
@@ -66,14 +65,12 @@ header {
     font-size: 22px;
     font-weight: 500;
     margin: 0 30px;
-    transition: a .55s ease;
+    transition: color .55s ease;
 }
 
 .navegação a:hover {
     color: var(--main-color);
-
 }
-
 
 .header-icons {
     display: flex;
@@ -87,27 +84,11 @@ header {
     cursor: pointer;
 }
 
-.header-icons {
-    display: flex;
-    align-items: center;
-}
-
 .header-icons i {
     margin-right: 25px;
     font-size: 28px;
     cursor: pointer;
     transition: all .5s ease;
-    .product-image {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        color: white;
-        border-radius: 8px;
-        height: 100px;
-        line-height: 100px;
-        margin-bottom: 15px;
-        text-align: center;
-        vertical-align: middle;
-    }
 }
 
 .header-icons i:hover {
@@ -115,9 +96,7 @@ header {
     color: var(--main-color);
 }
 
-
 .section {
-
     padding: 0 15%;
 }
 
@@ -128,9 +107,8 @@ header {
     font-weight: 500;
     background: transparent;
     border: solid 2px var(--tex-color);
-    transition: all.55 ease;
+    transition: all .55s ease;
     color: #fff;
-    /*muda oq ????*/
 }
 
 .btn:hover {
@@ -139,41 +117,17 @@ header {
     color: #000;
 }
 
-
 main {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-
-.main {
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.main li img {
-    width: 50px;
-    height: auto;
-    max-width: 100%;
-}
-
-
 
 footer {
     background-color: #333;
     padding: 20px 0;
-    /*color: white;*/
     text-align: center;
-    /**/
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -264,13 +218,12 @@ nav ul li a {
     text-decoration: none;
 }
 
-
-
 /* CSS para o menu dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -279,15 +232,18 @@ nav ul li a {
     z-index: 1;
     right: 0;
 }
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
+
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -297,4 +253,47 @@ nav ul li a {
     width: 32px;
     height: 32px;
 }
+.form-container {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
 
+.form-container label {
+    color: #fff;
+}
+
+.form-container input[type="text"] {
+    background-color: #333;
+    border: none;
+    color: #fff;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.question p {
+    color: #fff;
+}
