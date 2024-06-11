@@ -326,7 +326,7 @@ footer .footer-copyright {
     color: #999;
 }
 
-.bx {
+.bx { 
     font-family: boxicons !important;
     font-weight: 400;
     font-style: normal;
@@ -338,6 +338,11 @@ footer .footer-copyright {
     speak: none;
     -webkit-font-smoothing: antialiased;
     color: rgb(255, 255, 255);
+}
+
+.bx-comment-detail{ /*icone de comentário na aba de feedback */
+    margin: 0px 5px 0px 0px;
+    font-size: 20px;
 }
 
 nav ul {
@@ -830,4 +835,116 @@ nav ul li a {
     border-radius: 50%;
     width: 32px;
     height: 32px;
+}
+
+/*---feedback---*/
+
+#comments-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#comments-list {
+    margin-bottom: 20px;
+}
+
+.comment-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.comment-box .comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-box .comment-name,
+.comment-box .comment-topic {
+    display: flex;
+    align-items: center;
+}
+
+.comment-box .comment-name i,
+.comment-box .comment-topic i {
+    margin-right: 5px;
+}
+
+.comment-box .comment-text {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.comment-box .comment-name {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.comment-box .comment-topic {
+    font-style: italic;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.comment-box .icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.comment-box .icons i {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    padding-top : 10vh;
+}
+
+.comment-form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-reply-title {
+    margin: 0;
+    margin-right: 10px;
+}
+
+#comment-name,
+#comment-topic,
+#comment-input {
+    resize: vertical;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+#comment-form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
