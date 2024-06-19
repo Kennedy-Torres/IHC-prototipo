@@ -41,6 +41,7 @@
             </div>
             <!--<a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>-->
             <!--<div id="menu"><i class='bx bx-menu'></i></div>-->
+            <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
         </div><!--header-icons-->
     </header>
     
@@ -72,37 +73,42 @@
 
 
         <div class="main">
-            <div class="row">
-                <li><img src="img/mesaicon.png" onclick="slider('img/restaurante.jpeg')"></li>></li>
-            </div><!--row-->
-            <div>
-                <h3>Reserva de Mesa</h3>
-            </div>
-
-            <div class="row2">
-                <li><img src="img/ifood-blog-image-removebg-preview.png"></li>
-            </div><!--row2-->
-            <div>
-                <h3>Integração ao ifood</h3>
-            </div>
-
-            <div class="row3">
-                <li><img src="img/menu-removebg-preview.png"></li>
-            </div><!--row3-->
-            <div>
-                <h3>Cardápio Digital</h3>
-            </div>
-
-            <div class="row4">
-                <li><img src="img/progresso-removebg-preview.png"
-                        onclick="slider('img/progressoPeidido-removebg-preview.pngprogressoPeidido-removebg-preview.png')">
-                </li>
-            </div><!--row4-->
-            <div>
-                <h3>Progresso do Pedido</h3>
-            </div>
-        </div><!--main-->
-
+            <div class="feature">
+                <div class="row">
+                    <li><img src="img/mesaicon.png" onclick="slider('img/restaurante.jpeg')"></li>
+                </div><!-- row -->
+                <div>
+                    <h3>Reserva de Mesa</h3>
+                </div>
+            </div><!-- feature -->
+    
+            <div class="feature">
+                <div class="row2">
+                    <li><img src="img/ifood-blog-image-removebg-preview.png"></li>
+                </div><!-- row2 -->
+                <div>
+                    <h3>Integração ao iFood</h3>
+                </div>
+            </div><!-- feature -->
+    
+            <div class="feature">
+                <div class="row3">
+                    <li><img src="img/menu-removebg-preview.png"></li>
+                </div><!-- row3 -->
+                <div>
+                    <h3>Cardápio Digital</h3>
+                </div>
+            </div><!-- feature -->
+    
+            <div class="feature">
+                <div class="row4">
+                    <li><img src="img/progresso-removebg-preview.png" onclick="slider('img/progressoPeidido-removebg-preview.pngprogressoPeidido-removebg-preview.png')"></li>
+                </div><!-- row4 -->
+                <div>
+                    <h3>Progresso do Pedido</h3>
+                </div>
+            </div><!-- feature -->
+        </div><!-- main -->
         <script>
             function slider(anything) {
                 document.querySelector('.one').src = anything;
@@ -117,7 +123,7 @@
             }
         </script>
         <script src="./login_logout/js/index.js"></script>
-
+        <script src="script.js"></script>
     </main>
     <footer class="footer">
         <div class="footer-content">
@@ -136,8 +142,23 @@
                 </ul>
             </div>
         </div>
-
     </footer>
+    <!-- Adicionar o JavaScript de alternância de modo -->
+    <script>
+        const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+
+        toggleDarkModeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleDarkModeBtn.textContent = '☀️';
+            } else {
+                toggleDarkModeBtn.textContent = '🌙';
+            }
+        });
+    </script>
 </body>
 
 </html>
+
+
