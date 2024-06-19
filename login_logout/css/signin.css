@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(#4443437a,#4e4c4c);
+  /*background: linear-gradient(#4443437a,#4e4c4c);*/
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -31,7 +31,7 @@ body {
 h1{
   text-align: center;
   margin-bottom: 20px;
-  color: #272262
+  color: #0d009c
 }
 
 .label-float input{
@@ -39,7 +39,7 @@ h1{
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #272262;
+  border-bottom: 2px solid #0d009c;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -61,7 +61,7 @@ h1{
 }
 
 .label-float label{
-  color: #272262;
+  color: #0d009c;
   pointer-event: none;
   position: absolute;
   top: 0;
@@ -81,7 +81,7 @@ button{
   background-color: transparent;
   border-color: #272262;
   color: #272262;
-  padding: 14px;
+  padding: 5px;
   font-weight: bold;
   font-size: 17pt;
   margin-top: 5px;
