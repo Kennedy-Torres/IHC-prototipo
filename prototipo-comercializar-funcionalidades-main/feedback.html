@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style_ajustes.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html" class="logo"></i>EMENU</a>
+
+        <ul class="navegação">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./produtos.html">Produtos</a></li>
+            <li><a href="./sac.html">Contatos</a></li>
+            <li><a href="./cart.html">Carrinho</a></li>
+            <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+
+        <div class="header-icons">
+            <a href="cart.html"><i class='bx bx-cart'></i></a>
+            <!-- Menu dropdown ao clicar no ícone do usuário -->
+            <div class="dropdown">
+                <a href="#"><i class='bx bx-user'></i></a>
+                <div class="dropdown-content">
+                    <a onclick="perfil()" id="profile-link">Perfil</a>
+                    <a onclick="sair()" id="login-logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="a" style="color: black">
+        <section style="border-radius: 10px; padding: 10px; width: 80%;">
+            <h2 style="text-align: left; color: #ffffff; font-size: 24px;">Compartilhe aqui as experiências que você
+                teve com o suporte, produtos fornecidos, interface e acessibilidade do site.</h2>
+        </section>
+        <section id="comments-section">
+            <div id="comments-list"></div>
+            <form id="comment-form">
+                <div class="comment-form-header">
+                    <i class='bx bx-comment-detail'></i>
+                    <h3 class="comment-reply-title" style="color: #ffffff;">Digite seu comentário</h3>
+                </div>
+                <input type="text" id="comment-name" placeholder="Seu nome" required>
+                <input type="text" id="comment-topic" placeholder="Tópico" required>
+                <textarea id="comment-input" placeholder="Digite seu comentário aqui..."></textarea>
+                <button type="submit">Publicar comentário</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>EMENU</h1>
+            </div>
+            <div class="footer-copyright">
+                <p style="color: aliceblue;">&copy; 2024 EMENU. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./feedback.js"></script>
+    <script src="./login_logout/js/index.js"></script>
+</body>
+
+</html>
