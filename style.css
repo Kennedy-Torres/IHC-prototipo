@@ -1,3 +1,7 @@
+#profile-link, #login-logout{
+    cursor: pointer;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +14,14 @@
 :root {
     --bg-color: var(--bg-color) #1d2631;
     --tex-color: #fff;
-    --main-color: #34e7f8;
-    --other-color: #fcfcfc;
+    --main-color: #00363b;
+    --other-color: #505050;
     --h1-font: 4rem;
     --p-font: 1rem;
 }
 
 p {
     color: #000000;
-
 
 }
 
@@ -30,20 +33,101 @@ p {
     color: #ffffff
 }
 
+#theme-toggle {
+    background: var(--main-color);
+    color: var(--other-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
 
+#theme-toggle:hover {
+    background-color: var(--tex-color);
+    color: var(--bg-color);
+}
 
+/* Defina variáveis para o modo claro */
+.light-mode {
+    --bg-color: #8b8787d3;
+    --tex-color: #000;
+    --main-color: #8b8787d3;
+    --other-color: #fff;
+}
+
+/* Defina variáveis para o modo escuro */
+.dark-mode {
+    --bg-color: #1d2631;
+    --tex-color: #fff;
+    --main-color: #0b3336;
+    --other-color: #fcfcfc;
+}
+
+/* Aplique as variáveis ao body */
 body {
-    background-color: #1d2631;
+    background-color: var(--bg-color);
     color: var(--tex-color);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+}
+
+body.dark-mode .home-text p {
+    color: #fff; /* Cor específica para o modo escuro */
 }
 
 
+body.dark-mode header {
+    background-color: #111;
+}
+
+body.dark-mode .navegação a {
+    color: var(--other-color);
+}
+
+body.dark-mode .navegação a:hover {
+    color: var(--main-color);
+}
+
+body.dark-mode .logo {
+    color: var(--tex-color);
+}
+
+body.dark-mode .header-icons i {
+    color: var(--tex-color);
+}
+
+body.dark-mode .btn {
+    border: 2px solid var(--tex-color);
+    color: var(--tex-color);
+}
+
+body.dark-mode .btn:hover {
+    background: var(--tex-color);
+    color: #000;
+}
+
+/* Estilo padrão (modo claro) */
+.home-text h1,
+.home-text h2,
+.home-text h3,
+.home-text h4,
+.home-text h5,
+.home-text h6 {
+    color: #000; /* Cor padrão para o modo claro */
+}
+
+/* Modo Escuro */
+body.dark-mode .home-text h1,
+body.dark-mode .home-text h2,
+body.dark-mode .home-text h3,
+body.dark-mode .home-text h4,
+body.dark-mode .home-text h5,
+body.dark-mode .home-text h6 {
+    color: #fff; /* Cor específica para o modo escuro */
+}
+
 header {
     background-color: #111;
-    color: white;
+    color: rgb(2, 2, 2);
     position: fixed;
     width: 100%;
     top: 0;
@@ -52,21 +136,25 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 8%;
+    padding: 15px 8%;
     display: flex;
 }
 
+/* Modo Escuro */
+body.dark-mode .logo {
+    color: #fff; /* Cor específica para o modo escuro */
+}
 
 .logo {
+    color: var(--tex-color); /* Cor padrão para o modo claro */
     display: flex;
     align-items: center;
-    color: var(--tex-color);
     font-size: 28px;
     font-weight: bold;
 }
 
 .logo i {
-    color: var(--main-color);
+    
     font-size: 32px;
     margin-right: 5px;
 }
@@ -129,17 +217,6 @@ header {
 
     padding: 0 15%;
 }
-/*
-.home {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
-}*/
-/* Estilos para a seção principal */
 .home {
     height: 100vh;
     display: flex;
@@ -149,36 +226,16 @@ header {
 }
 
 .home-text {
+    
     height: 70vh;
     flex: 1;
     padding: 0 20px;
 }
-/*
-.home-text h1 {
-    font-size: var(--h1-font);
-    line-height: 1.2;
-    margin-bottom: 2px;
-}
 
+/* Estilo padrão (modo claro) */
 .home-text p {
-    margin-right: 50px;
+    color: #000; /* Cor padrão para o modo claro */
 }
-
-.home-text h3 {
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 35px;
-}
-
-
-.home-img img {
-    max-width: 100%;
-    width: 35rem;
-    height: auto;
-    margin-left: 35%;
-}
-*/
 
 .btn {
     display: inline-block;
@@ -209,7 +266,7 @@ main {
 
 .main {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 3%;
     transform: translateY(-50%);
     display: flex;
@@ -295,11 +352,12 @@ main {
 footer {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 15px 8%;
     text-align: center;
-    position: fixed;
+    /*position: fixed;*/ /*FOOTER NAO PRECISA FICAR FIXO NA LETA*/
+    position: absolute ;
     width: 100%;
-    bottom: 0;
+    bottom: auto;
 }
 
 footer .footer-content {
@@ -358,7 +416,7 @@ footer .footer-copyright {
     color: #999;
 }
 
-.bx {
+.bx { 
     font-family: boxicons !important;
     font-weight: 400;
     font-style: normal;
@@ -370,6 +428,11 @@ footer .footer-copyright {
     speak: none;
     -webkit-font-smoothing: antialiased;
     color: rgb(255, 255, 255);
+}
+
+.bx-comment-detail{ /*icone de comentário na aba de feedback */
+    margin: 0px 5px 0px 0px;
+    font-size: 20px;
 }
 
 nav ul {
@@ -389,13 +452,12 @@ nav ul li a {
 
 .products {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 80%;
     margin-top: 5%;
     flex-direction: row;
 }
-
 
 .product p {
     color: #000000;
@@ -533,11 +595,13 @@ nav ul li a {
     max-width: 900px;
     margin: 80px auto;
     padding: 20px;
+    min-height: 375px;
 }
 
 
 .section-title {
     margin-top: 40px;
+    text-align: center;
 }
 
 .form-container {
@@ -861,4 +925,116 @@ nav ul li a {
     border-radius: 50%;
     width: 32px;
     height: 32px;
+}
+
+/*---feedback---*/
+
+#comments-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#comments-list {
+    margin-bottom: 20px;
+}
+
+.comment-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.comment-box .comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-box .comment-name,
+.comment-box .comment-topic {
+    display: flex;
+    align-items: center;
+}
+
+.comment-box .comment-name i,
+.comment-box .comment-topic i {
+    margin-right: 5px;
+}
+
+.comment-box .comment-text {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.comment-box .comment-name {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.comment-box .comment-topic {
+    font-style: italic;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.comment-box .icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.comment-box .icons i {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    padding-top : 10vh;
+}
+
+.comment-form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-reply-title {
+    margin: 0;
+    margin-right: 10px;
+}
+
+#comment-name,
+#comment-topic,
+#comment-input {
+    resize: vertical;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+#comment-form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
