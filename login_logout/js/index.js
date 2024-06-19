@@ -16,7 +16,11 @@ if (localStorage.getItem("token") == null) {
 }
 
 function sair() {
-  localStorage.removeItem("token");
-  localStorage.removeItem("userLogado");
-  window.location.href = "./login_logout/html/signin.html";
+  localStorage.removeItem('userLogado');
+  localStorage.removeItem('token');
+  window.location.href = './login_logout/html/signin.html'; // Redireciona para a página de login
+}
+
+function perfil() {
+  window.location.replace('../login_logout/html/perfil.html');
 }

@@ -8,7 +8,7 @@
     <!-- or -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Finalizar Compra</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,6 +21,7 @@
                 <li><a href="./produtos.html">Produtos</a></li>
                 <li><a href="./sac.html">Contatos</a></li>
                 <li><a href="./cart.html">Carrinho</a></li>
+                <li><a href="./feedback.html">Feedback</a></li>
             </ul><!--navegação-->
 
             <div class="header-icons">
@@ -29,8 +30,8 @@
                 <div class="dropdown">
                     <a id="userIcon" href="#"><i class='bx bx-user'></i></a>
                     <div class="dropdown-content">
-                        <a href="#" id="profile-link">Perfil</a>
-                        <a href="#" onclick="sair()" id="login-logout">Logout</a>
+                        <a onclick="perfil()" id="profile-link">Perfil</a>
+                        <a onclick="sair()" id="login-logout">Logout</a>
                     </div>
                 </div>
                 <!--<div id="menu"><i class='bx bx-menu'></i></div>-->
@@ -38,7 +39,7 @@
         </header>
 
         <main class="a">
-            <div class="page-title logo">Finalizar Compra</div>
+            <div class="page-title logo" style="margin-bottom: 20px;">Finalizar Compra</div>
             <div id="cartItems" class="cartItems"></div>
             <section id="cartSection" class="cartSection" style="color: black;">
 

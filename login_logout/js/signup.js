@@ -1,3 +1,4 @@
+/*---REGISTRANDO OS DADOS DO USUÁRIO---*/
 let btn = document.querySelector('#verSenha')
 let btnConfirm = document.querySelector('#verConfirmSenha')
 
@@ -10,7 +11,7 @@ let usuario = document.querySelector('#usuario')
 let labelUsuario = document.querySelector('#labelUsuario')
 let validUsuario = false
 
-let Email = document.querySelector('#Email')
+let email = document.querySelector('#Email')
 let labelEmail = document.querySelector('#labelEmail')
 let validEmail = false
 
@@ -25,6 +26,13 @@ let validConfirmSenha = false
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
 
+/*---ARMAZENANDO OS DADOS DO USUÁRIO individualmente NA CACHE..."localStorage" --- teste
+
+localStorage.setItem('nome', nome.value);
+localStorage.setItem('usuario', usuario.value);
+localStorage.setItem('email', email.value);
+document.getElementById('nome').value = localStorage.getItem('nome', nome.value);
+*/
 nome.addEventListener('keyup', () => {
   if(nome.value.length <= 2){
     labelNome.setAttribute('style', 'color: red')
@@ -53,8 +61,8 @@ usuario.addEventListener('keyup', () => {
   }
 })
 
-Email.addEventListener('keyup', () => {
-  if(Email.value.length <= 4){
+email.addEventListener('keyup', () => {
+  if(email.value.length <= 4){
     labelEmail.setAttribute('style', 'color: red')
     labelEmail.innerHTML = 'Email *Invalido'
     usuario.setAttribute('style', 'border-color: red')
@@ -62,7 +70,7 @@ Email.addEventListener('keyup', () => {
   } else {
     labelEmail.setAttribute('style', 'color: green')
     labelEmail.innerHTML = 'Email'
-    Email.setAttribute('style', 'border-color: green')
+    email.setAttribute('style', 'border-color: green')
     validEmail = true
   }
 })
@@ -99,13 +107,12 @@ function cadastrar(){
   if(validNome && validUsuario && validSenha && validConfirmSenha){
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
     
-    listaUser.push(
-    {
+    listaUser.push({
       nomeCad: nome.value,
       userCad: usuario.value,
+      emailCad: email.value,
       senhaCad: senha.value
-    }
-    )
+    });
     
     localStorage.setItem('listaUser', JSON.stringify(listaUser))
     

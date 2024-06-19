@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- or -->
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <title>Carrinho de Compras</title>
-    <!--<link rel="stylesheet" href="./style.css">-->
-    <link rel="stylesheet" href="style_ajustes.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <a href="./index.html" class="logo"></i>EMENU</a>
@@ -34,23 +33,31 @@
                     <a onclick="sair()" id="login-logout">Logout</a>
                 </div>
             </div>
-            <!--<a href="./login_logout/html/signin.html"><i class='bx bx-user'></i></a>-->
-            
         </div>
     </header>
 
     <main class="a" style="color: black">
-        <section id="cart" class="cart">
-            <h2>Carrinho de Compras</h2>
-            <div id="cart-items"></div>
-            <p>Total: R$ <span id="total-price">0.00</span></p>
-            <button onclick="checkout()">CHECKOUT</button>
-            <button type="button" onclick="cancelarCompra()" >Cancelar compra</button>
-            <button class="back-button" onclick="window.location.href='produtos.html'">Voltar</button>
+        <h2 style="color: #ffffff; font-size: 28px;">Feedback</h2>
+        <section style="border-radius: 10px; padding: 10px; width: 67%;">
+            <h2 style="text-align: center; color: #ffffff; font-size: 16px;">Compartilhe aqui as experiências que você
+                teve com o suporte, produtos fornecidos, interface e acessibilidade do site.</h2>
+        </section>
+        <section id="comments-section">
+            <div id="comments-list"></div>
+            <form id="comment-form">
+                <div class="comment-form-header">
+                    <i class='bx bx-comment-detail'></i>
+                    <h3 class="comment-reply-title" style="color: #ffffff;">Digite seu comentário</h3>
+                </div>
+                <input type="text" id="comment-name" placeholder="Seu nome" required>
+                <input type="text" id="comment-topic" placeholder="Tópico" required>
+                <textarea id="comment-input" placeholder="Digite seu comentário aqui..."></textarea>
+                <button type="submit">Publicar comentário</button>
+            </form>
         </section>
     </main>
 
-    <footer  class=".ajusteNoFooter" >
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
                 <h2>EMENU</h1>
@@ -67,10 +74,11 @@
                 </ul>
             </div>
         </div>
-        
+
     </footer>
-    
-    <script src="produtos.js"></script>
+
+    <script src="./feedback.js"></script>
     <script src="./login_logout/js/index.js"></script>
 </body>
+
 </html>
