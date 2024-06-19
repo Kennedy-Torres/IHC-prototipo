@@ -645,9 +645,9 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    padding-top: 80px;
     text-align: center;
-    background-color: #524F26;
+    background-color: #1d2631;
 }
 
 .confirmation-message {
@@ -655,7 +655,7 @@ nav ul li a {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 40px;
-    width: 50%;
+    width: 40%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
